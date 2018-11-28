@@ -2,8 +2,11 @@ PILSS: Pharmaceutical Industrial Limb Sorting System
 
 
 cd ~/catkin_ws
+
 git clone https://github.com/calvinhe612/PILSS.git
+
 catkin_make
+
 source ~/catkin_ws/devel/setup.bash
 
 # Run following in seperate terminal

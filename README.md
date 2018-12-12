@@ -1,28 +1,91 @@
-PILSS: Pharmaceutical Industrial Limb Sorting System
+# PILSS: Pharmaceutical Industrial Limb Sorting System 
 
+# By Calvin He, Ilya Lifshits, and Kyle Young 
 
-cd ~/catkin_ws
+# Worcester Polytechnic Institute 
 
-git clone https://github.com/calvinhe612/PILSS.git
+# RBE 594 Fall 2018 - Capstone Project Experience in Robotics Engineering 
 
-catkin_make
+# Advisor: Riad Hammoud 
 
-source ~/catkin_ws/devel/setup.bash
+ 
 
-# Run following in seperate terminal
-roslaunch rrbot_moveit_config demo.launch
+# Install following software in Ubuntu 16.04 before running PILSS: 
 
-rosrun abc_qa moveit_demo
+ROS Kinetic 
 
-rosrun abc_qa rviz_to_gazebo_node
+Gazebo 7.X 
 
-roslaunch rrbot_gazebo rrbot_world.launch
+RViz 
 
-roslaunch rrbot_control rrbot_control.launch
+MoveIt! 
 
-python pill_tracker/pill_tracker.py
+ 
 
+# Install libraries for Python 2.7: 
 
-TODO:
-- clean up code
-- rename ros packages
+Numpy 
+
+Rospy 
+
+Sklearn 
+
+Scipy 
+
+Shapely 
+
+ 
+
+# The Python implementations uses the following additional functionality and is already included in the repository: 
+
+https://github.com/ndanielsen/Same-Size-K-Means 
+
+https://www.pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/ 
+
+Acknowledgement to Nathan Danielsen and Adrian Rosebrock for their open sourced implementations. 
+
+ 
+
+# Cloning and catkin_make the PILSS repository: 
+
+git clone https://github.com/calvinhe612/PILSS.git 
+
+cp –r PILSS/catkin_ws ~/catkin_ws 
+
+cd ~/catkin_ws 
+
+catkin_make 
+
+ 
+
+# Source catkin_ws: 
+
+The following commands need to be executed in their own terminal. Before executing them, first need to source the catkin_ws. This can be done by first running: 
+
+source catkin_ws/devel/setup.bash  
+
+in every terminal before running the command, or you can add the above line to the ~/.bashrc file. 
+
+ 
+
+# Use MoveIt! Setup Assistant and load in the robot model: 
+
+roslaunch moveit_setup_assistant setup_assistant.launch 
+
+In the popped up MoveIt! Setup Assistant window, click on “Edit Existing MoveIt Configuration Package”. Then click on “Browse” and select directory: ~/catkin_ws/src/rrbot_moveit_config. Then press “Load Files”. 
+
+ 
+
+# Run each separate command in order in their own new terminal: 
+
+roslaunch rrbot_moveit_config demo.launch 
+
+rosrun ros_nodes moveit_pills 
+
+rosrun ros_nodes rviz_to_gazebo_node 
+
+roslaunch rrbot_gazebo rrbot_world.launch 
+
+roslaunch rrbot_control rrbot_control.launch 
+
+python ~/catkin_ws/python_cv/pilss_detection.py 

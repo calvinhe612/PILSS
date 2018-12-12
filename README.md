@@ -1,12 +1,12 @@
 # PILSS: Pharmaceutical Industrial Limb Sorting System 
 
-# By Calvin He, Ilya Lifshits, and Kyle Young 
+By Calvin He, Ilya Lifshits, and Kyle Young 
 
-# Worcester Polytechnic Institute 
+Worcester Polytechnic Institute 
 
-# RBE 594 Fall 2018 - Capstone Project Experience in Robotics Engineering 
+RBE 594 Fall 2018 - Capstone Project Experience in Robotics Engineering 
 
-# Advisor: Riad Hammoud 
+Advisor: Riad Hammoud 
 
  
 

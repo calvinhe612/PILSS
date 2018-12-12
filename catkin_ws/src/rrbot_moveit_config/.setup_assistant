@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rrbot_description
+    relative_path: urdf/rrbot.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/rrbot.srdf
+  CONFIG:
+    author_name: Kyle Young
+    author_email: kcyoung@wpi.edu
+    generated_timestamp: 1543530845

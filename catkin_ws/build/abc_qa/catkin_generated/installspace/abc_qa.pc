@@ -1,0 +1,8 @@
+prefix=/home/ilya/catkin_ws/install
+
+Name: abc_qa
+Description: Description of abc_qa
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ilya/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,2 @@
+beginner_tutorials:gazebo_ros/custom_plugin_tutorial:gazebo_ros/rrbot_control:gazebo_ros/rrbot_description:gazebo_ros/rrbot_gazebo:ros_nodes:rrbot_moveit_config
+-DCATKIN_DEVEL_PREFIX=/home/ilya/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ilya/catkin_ws/install -G Unix Makefiles

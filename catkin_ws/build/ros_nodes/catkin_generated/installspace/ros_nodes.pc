@@ -1,0 +1,8 @@
+prefix=/home/ilya/catkin_ws/install
+
+Name: ros_nodes
+Description: Description of ros_nodes
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ilya/catkin_ws/install/lib 
+Requires: 

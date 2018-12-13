@@ -62,7 +62,7 @@ catkin_make
 
 The following commands need to be executed in their own terminal. Before executing them, first need to source the catkin_ws. This can be done by first running: 
 
-source catkin_ws/devel/setup.bash  
+source ~/catkin_ws/devel/setup.bash  
 
 in every terminal before running the command, or you can add the above line to the ~/.bashrc file. 
 

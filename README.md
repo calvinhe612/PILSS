@@ -10,7 +10,7 @@ Advisor: Riad Hammoud
 
  
 
-# Install following software in Ubuntu 16.04 before running PILSS: 
+## Install following software in Ubuntu 16.04 before running PILSS: 
 
 ROS Kinetic 
 
@@ -22,7 +22,7 @@ MoveIt!
 
  
 
-# Install libraries for Python 2.7: 
+## Install libraries for Python 2.7: 
 
 Numpy 
 
@@ -36,7 +36,7 @@ Shapely
 
  
 
-# The Python implementations uses the following additional functionality and is already included in the repository: 
+## The Python implementations uses the following additional functionality and is already included in the repository: 
 
 https://github.com/ndanielsen/Same-Size-K-Means 
 
@@ -48,44 +48,44 @@ Acknowledgement to Nathan Danielsen and Adrian Rosebrock for their open sourced 
 
 # Cloning and catkin_make the PILSS repository: 
 
-git clone https://github.com/calvinhe612/PILSS.git 
+    git clone https://github.com/calvinhe612/PILSS.git 
 
-cp –r PILSS/catkin_ws ~/catkin_ws 
+    cp –r PILSS/catkin_ws ~/catkin_ws 
 
-cd ~/catkin_ws 
+    cd ~/catkin_ws 
 
-catkin_make 
+    catkin_make 
 
  
 
-# Source catkin_ws: 
+## Source catkin_ws: 
 
 The following commands need to be executed in their own terminal. Before executing them, first need to source the catkin_ws. This can be done by first running: 
 
-source ~/catkin_ws/devel/setup.bash  
+    source ~/catkin_ws/devel/setup.bash  
 
 in every terminal before running the command, or you can add the above line to the ~/.bashrc file. 
 
  
 
-# Use MoveIt! Setup Assistant and load in the robot model: 
+## Use MoveIt! Setup Assistant and load in the robot model: 
 
-roslaunch moveit_setup_assistant setup_assistant.launch 
+    roslaunch moveit_setup_assistant setup_assistant.launch 
 
 In the popped up MoveIt! Setup Assistant window, click on “Edit Existing MoveIt Configuration Package”. Then click on “Browse” and select directory: ~/catkin_ws/src/rrbot_moveit_config. Then press “Load Files”. 
 
  
 
-# Run each separate command in order in their own new terminal: 
+## Run each separate command in order in their own new terminal: 
 
-roslaunch rrbot_moveit_config demo.launch 
+    roslaunch rrbot_moveit_config demo.launch 
 
-rosrun ros_nodes moveit_pills 
+    rosrun ros_nodes moveit_pills 
 
-rosrun ros_nodes rviz_to_gazebo_node 
+    rosrun ros_nodes rviz_to_gazebo_node 
 
-roslaunch rrbot_gazebo rrbot_world.launch 
+    roslaunch rrbot_gazebo rrbot_world.launch 
 
-roslaunch rrbot_control rrbot_control.launch 
+    roslaunch rrbot_control rrbot_control.launch 
 
-python ~/catkin_ws/python_cv/pilss_detection.py 
+    python ~/catkin_ws/python_cv/pilss_detection.py 
